@@ -1,0 +1,16 @@
+#!/bin/bash
+#export MAKEFLAGS= -j 5
+#sleep  1h
+ulimit -s unlimited
+ulimit -l 2097152
+source ./shrc
+#runspec --config bench.cfg --tune=all -C 1 --iterations=3  --size=ref --reportable all 1>runspec.out 2>runspec.err
+#runspec  --config base.cfg --tune=all -C 1 --iterations=1  --size=ref --noreportable --ignoreerror all 1>runspec.out 2>runspec.err
+#runspec --config bench.cfg --tune=all -C 1 -I --iterations=1  -i ref all
+#runspec --config bench.cfg --tune=all -C 1 --iterations=1  --noreportable 403 #1> runspec.out 2>runspec.err
+#runspec --config bench.cfg --tune=peak -C 1 --iterations=3 --reportable --ignoreerror  -i ref all
+#runspec --config Loongson3A4000-gcc-linux.cfg --tune=peak -C 1 --iterations=1 --noreportable --ignoreerror -i ref 462
+runspec --config Loongson3A4000-gcc-linux_peak.cfg --tune=peak -C 1 --iterations=1 --noreportable --ignoreerror -i ref all
+runspec --config Base-Ofast.cfg --tune=base -C 1 --iterations=1 --noreportable --ignoreerror -i ref all
+runspec --config Base-O3.cfg --tune=base -C 1 --iterations=1 --noreportable --ignoreerror -i ref all
+runspec --config Base-O2.cfg --tune=base -C 1 --iterations=1 --noreportable --ignoreerror -i ref all
