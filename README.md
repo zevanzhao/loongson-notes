@@ -1,10 +1,16 @@
 # 龙芯笔记
 这个笔记，记录了个人在使用搭载龙芯处理器的各种产品的过程中，积累的各种经验，遇到的各种问题。希望这个笔记对其他龙芯的用户有用。
 
-## 龙架构下Debian操作系统相关问题
+## MIPS时代的龙芯笔记
+* [龙芯3A4000处理器 SPEC CPU 2006测试](LoongsonBenchmark/SPEC2006/龙芯3A4000-SPEC%20CPU%202006测试-终结篇.pdf)
+* [龙芯3A4000处理器超频内核的编译](OverClockKernelPatch/readme.md)
+
+## 龙架构（Loongarch）下Debian操作系统相关问题
 * [liblol的安装](tutorials/install_liblol.md)
 * [星火商店的使用](tutorials/spark_store.md)
 * [linux QQ闪退问题](tutorials/linux_qq_闪退.md)
 * [WPS一级标题乱码](tutorials/WPS一级标题乱码.md)
 * [统信UOS系统以及银河麒麟系统下QtCreator无法使用](tutorials/QtCreator的使用.md)
-
+* [apt-file命令无法使用根据文件查找软件包](tutorials/apt-file.md)
+* [龙架构SIMD指令手册](tutorials/simd-doc.md)
+* [龙架构上使用ollama 0.5.7部署deepseek大模型(新世界+旧世界)](tutorials/龙芯平台上部署deepseek大模型的教程（新世界+旧世界）.pdf)
