@@ -14,3 +14,4 @@
 * [apt-file命令无法使用根据文件查找软件包](tutorials/apt-file.md)
 * [龙架构SIMD指令手册](tutorials/simd-doc.md)
 * [龙架构上使用ollama 0.5.7部署deepseek大模型(新世界+旧世界)](tutorials/龙芯平台上部署deepseek大模型的教程（新世界+旧世界）.pdf)
+* [docker的使用](tutorials/docker.md)
