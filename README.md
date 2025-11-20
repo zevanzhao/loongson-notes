@@ -2,6 +2,7 @@
 这个笔记，记录了个人在使用搭载龙芯处理器的各种产品的过程中，积累的各种经验，遇到的各种问题。希望这个笔记对其他龙芯的用户有用。
 
 ## MIPS时代的龙芯笔记
+* [二代龙芯派硬件+内核+系统配置笔记](tutorials/二代龙芯派硬件+内核+系统配置笔记-zevan.md)
 * [龙芯3A4000处理器 SPEC CPU 2006测试](LoongsonBenchmark/SPEC2006/龙芯3A4000-SPEC%20CPU%202006测试-终结篇.pdf)
 * [龙芯3A4000处理器超频内核的编译](OverClockKernelPatch/readme.md)
 
@@ -16,3 +17,4 @@
 * [龙架构上使用ollama 0.5.7部署deepseek大模型(新世界+旧世界)](tutorials/龙芯平台上部署deepseek大模型的教程（新世界+旧世界）.pdf)
 * [docker的使用](tutorials/docker.md)
 * [内核的编译和使用](tutorials/kernel-compile.md)
+* [国光 UT6500-LA6 3A6000笔记本电脑使用经验](tutorials/GEIT-UT6500-LA6.md)
