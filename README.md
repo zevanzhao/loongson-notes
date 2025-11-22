@@ -18,4 +18,5 @@
 * [龙架构上使用ollama 0.5.7部署deepseek大模型(新世界+旧世界)](tutorials/龙芯平台上部署deepseek大模型的教程（新世界+旧世界）.pdf)
 * [docker的使用](tutorials/docker.md)
 * [内核的编译和使用](tutorials/kernel-compile.md)
+* [龙芯3A6000笔记本-三系统共存操作指南](tutorials/龙芯3A6000笔记本-三系统共存操作指南.md)
 * [国光 UT6500-LA6 3A6000笔记本电脑使用经验](tutorials/GEIT-UT6500-LA6.md)
