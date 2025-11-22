@@ -3,6 +3,7 @@
 
 ## MIPS时代的龙芯笔记
 * [二代龙芯派硬件+内核+系统配置笔记](tutorials/二代龙芯派硬件+内核+系统配置笔记-zevan.md)
+* [用编程器给二代龙芯派更新pmon](tutorials/用编程器给二代龙芯派更新pmon教程.md)
 * [龙芯3A4000处理器 SPEC CPU 2006测试](LoongsonBenchmark/SPEC2006/龙芯3A4000-SPEC%20CPU%202006测试-终结篇.pdf)
 * [龙芯3A4000处理器超频内核的编译](OverClockKernelPatch/readme.md)
 
