@@ -11,6 +11,7 @@
 * [龙芯3A3000主板评测](LoongsonBenchmark/Loongson3A3000主板评测-2018.md)
 * [二代龙芯派VS树莓派3B+：谁的性能更强悍？](LoongsonBenchmark/二代龙芯派和树莓派3B+性能PK.md)
 * [龙芯3A4000处理器 SPEC CPU 2006测试](LoongsonBenchmark/SPEC2006/龙芯3A4000-SPEC%20CPU%202006测试-终结篇.pdf)
+* [航天龙梦福珑迷你主机开箱评测](LoongsonBenchmark/航天龙梦福珑迷你主机开箱评测.md)
 
 ## 龙架构（Loongarch）下Debian操作系统相关问题
 * [liblol的安装](tutorials/install_liblol.md)
