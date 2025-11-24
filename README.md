@@ -5,6 +5,7 @@
 * [二代龙芯派硬件+内核+系统配置笔记](tutorials/二代龙芯派硬件+内核+系统配置笔记-zevan.md)
 * [用编程器给二代龙芯派更新pmon](tutorials/用编程器给二代龙芯派更新pmon教程.md)
 * [龙芯3A4000处理器超频内核的编译](OverClockKernelPatch/readme.md)
+* [在福珑2上体验8种龙芯版操作系统](tutorials/在福珑2上体验8种龙芯版操作系统.md)
 * [龙芯处理器家谱](tutorials/龙芯处理器家谱.md)
 
 ## 测评
