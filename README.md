@@ -7,6 +7,8 @@
 * [龙芯3A4000处理器超频内核的编译](OverClockKernelPatch/readme.md)
 * [在福珑2上体验8种龙芯版操作系统](tutorials/在福珑2上体验8种龙芯版操作系统.md)
 * [福珑2设置串口登录](tutorials/福珑2设置串口登录.md)
+* [二代龙芯派上LinuxFromScratch操作系统的创建](tutorials/二代龙芯派上LinuxFromScratch操作系统的创建.md)
+* [福珑2上LinuxFromScratch操作系统的创建](tutorials/福珑2上LinuxFromScratch操作系统的创建.md)
 * [龙芯处理器家谱](tutorials/龙芯处理器家谱.md)
 
 ## 测评
