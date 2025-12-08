@@ -30,3 +30,7 @@
 * [内核的编译和使用](tutorials/kernel-compile.md)
 * [龙芯3A6000笔记本-三系统共存操作指南](tutorials/龙芯3A6000笔记本-三系统共存操作指南.md)
 * [国光 UT6500-LA6 3A6000笔记本电脑使用经验](tutorials/GEIT-UT6500-LA6.md)
+
+## 《汇编语言编程基础：基于Loongarch》学习笔记
+* [笔记](./tutorials/loongarch-ASM-notes.md)
+* [勘误](./tutorials/loongarch-ASM-errata.md)
