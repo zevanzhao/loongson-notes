@@ -35,7 +35,7 @@ fmov.s f2, f0
 fmov.s f2, f1
 ```
 事实上，这段语句中`fmov.s f2, f1`一定会执行，因此给出的答案一定是错的。正确的汇编语句应该是
-```
+```asm
 fcmp.slt.s fcc0, f0. f1
 bceqz fcc0, 0x8
 fmov.s f2, f0
@@ -50,3 +50,21 @@ fmov.s f2, f1
 Motorola 6800、Motorola 68000、PowerPC 970、System/370、SPARC（除V9外）等处理器为大端序。
 
 参考: [字节序](https://zh.wikipedia.org/wiki/%E5%AD%97%E8%8A%82%E5%BA%8F)。
+
+## 第163页
+10.3 指令融合和地址对齐中，
+指令`shl r3, 3`不是一个真实存在的指令。
+指令`alsl_d r2, r3, r2, 2`，应该为`alsl.d r2, r3, r2, 2`。
+
+## 第166~168页
+以166页为例，如下有一段汇编代码：
+```asm
+i1 Loop: fld.f fa0, 0(r1)
+                | 1
+i2       fadd.f fa2, fa0, fa1
+                | 2
+i3       fsd.f  fa2, 0(r1)
+i4       addi.w r1, r1, -4
+i5       bnez  r1, Loop
+```
+实际上 `fld.f`, `fadd.f`, `fsd.f`指令都不存在，应该是`fld.s`, `fadd.s`, `fst.s`指令。
