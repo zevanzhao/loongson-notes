@@ -42,15 +42,56 @@
 
 因此，同时安装多个操作系统的时候，多系统引导会成为一个问题。关于这个问题的解决方案，可以参见[三系统共存操作指南](./龙芯3A6000笔记本-三系统共存操作指南.md)。
 
-### 系统休眠问题
 
-使用国光笔记本电脑的时候，如果安装了新世界操作系统，且使用的是上游内核，笔记本电脑的休眠以后将无法正常唤醒。Loongnix 25提供的6.6.52版本的内核下，不存在这个问题。
+### 触摸板的使用
+当使用Debian官方内核的时候，笔记本的触摸板无法使用。该问题在[这里](https://loongfans.cn/pages/guides/errata-laptop.html)亦有描述。
+
+以Debian 中的 6.17.11内核为例，要解决这个问题，需要进行如下的操作：
+
+* 下载官方源码，并解压缩。
+```bash
+apt install linux-source-6.17
+cd /usr/src/
+tar xvfJ linux-source-6.17.tar.xz
+cd linux-source-6.17
+```
+
+* 修改源码，打上[这里](https://github.com/AOSC-Tracking/linux/commit/e29193f3f1a3)的补丁，添加LS7A GPIO 中断支持
+
+* 配置内核
+```bash
+cp /boot/config-6.17.11 .config
+make menuconfig
+```
+也可以使用`/usr/src/linux-config-6.17/config.loong64_none_loong64`这个配置文件。
+配置的时候，注意需要打开在配置GPIO驱动的时候打开`CONFIG_GPIO_LOONGSON_64BIT=m`，在配置I2C驱动的时候，打开`CONFIG_I2C_LS2X=m`以及 `CONFIG_I2C_HID_ACPI=m`。注意，编译内核的时候不要开启调试选项，否则编译会非常耗时。
+
+完成内核的编译以后，使用新的内核以及内核模块，触摸板就可以驱动了。
+
+关于内核的编译，可以参考[kernel 6.x 内核编译编译](./kernel-compile.md)。
+
+### 系统挂起唤醒问题
+
+使用国光笔记本电脑的时候，如果安装了新世界操作系统，且使用的是上游内核，笔记本电脑的挂起到内存以后将无法正常唤醒。Loongnix 25提供的6.6.52版本的内核下，不存在这个问题。
 
 这个问题疑似是笔记本的设计缺陷，可能可以通过升级固件来进行规避。但现阶段3.5版本的固件没有修复这个问题。
 
+这个问题可以被修复，而且应该与显卡驱动一起修复。
+具体的流程如下：
+* 修正源码，打上[ACPI 板级初始化代码](https://github.com/AOSC-Tracking/linux/commit/dbb668a14178)补丁。
+* 打上[这个](https://github.com/AOSC-Tracking/linux/commit/30b69e76d820)补丁，修正PWM控制器的默认频率。
+* 打上[这个](https://github.com/AOSC-Tracking/linux/commit/02bbc23d5c6124cf3d0db763501a65736b146092)补丁，修复S3挂起以后无法唤醒的问题。
+* 使用[这里](https://github.com/AOSC-Tracking/loonggpu-kernel-dkms/tree/aosc/v1.0.1-alpha-lnd25.5)的Loonggpu驱动。注意，对于3A6000笔记本，需要使用`aosc/v1.0.1-alpha-lnd25.5`这个分支中的代码。关键的补丁是[这个](https://github.com/AOSC-Tracking/loonggpu-kernel-dkms/commit/aaee8cb5d7f879ba4cd2cb268a8591f99735b729)。
+* 要单独编译内核驱动，可以使用在loonggpu-kernel-dkms源码目录中运行
+```bash
+env LG_VERBOSE=1 make -j8 modules KERNEL_UNAME=6.17.11
+```
+根据你的内核源码版本，修改KENEL_UNAME字符串。
+
+参考：[ABI 2.0 系统搭配 LoongGPU 驱动时背光调整功能不可用](https://loongfans.cn/pages/guides/errata-laptop.html)
 ### 屏幕亮度调节问题
 
-更新固件到3.5以后，屏幕亮度无法调节。
+更新固件到3.5以后，屏幕亮度无法调节。修复显卡驱动以后，亮度调节问题也得到修复。
 
 ### KVM虚拟机的使用
 
