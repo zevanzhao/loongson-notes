@@ -20,7 +20,7 @@
 ## 龙架构（Loongarch）下Debian操作系统相关问题
 * [liblol的安装](tutorials/install_liblol.md)
 * [星火商店的使用](tutorials/spark_store.md)
-* [linux QQ闪退问题](tutorials/linux_qq_闪退.md)
+* [linux QQ使用问题](tutorials/linux_qq_闪退.md)
 * [WPS一级标题乱码](tutorials/WPS一级标题乱码.md)
 * [统信UOS系统以及银河麒麟系统下QtCreator无法使用](tutorials/QtCreator的使用.md)
 * [apt-file命令无法使用根据文件查找软件包](tutorials/apt-file.md)
