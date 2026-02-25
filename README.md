@@ -11,13 +11,7 @@
 * [福珑2上LinuxFromScratch操作系统的创建](tutorials/福珑2上LinuxFromScratch操作系统的创建.md)
 * [龙芯处理器家谱](tutorials/龙芯处理器家谱.md)
 
-## 测评
-* [龙芯3A3000主板评测](LoongsonBenchmark/Loongson3A3000主板评测-2018.md)
-* [二代龙芯派VS树莓派3B+：谁的性能更强悍？](LoongsonBenchmark/二代龙芯派和树莓派3B+性能PK.md)
-* [龙芯3A4000处理器 SPEC CPU 2006测试](LoongsonBenchmark/SPEC2006/龙芯3A4000-SPEC%20CPU%202006测试-终结篇.pdf)
-* [航天龙梦福珑迷你主机开箱评测](LoongsonBenchmark/航天龙梦福珑迷你主机开箱评测.md)
-
-## 龙架构（Loongarch）下Debian操作系统相关问题
+## 龙架构（Loongarch）时代的龙芯笔记
 * [liblol的安装](tutorials/install_liblol.md)
 * [星火商店的使用](tutorials/spark_store.md)
 * [linux QQ使用问题](tutorials/linux_qq_闪退.md)
@@ -34,3 +28,9 @@
 ## 《汇编语言编程基础：基于Loongarch》学习笔记
 * [笔记](./tutorials/loongarch-ASM-notes.md)
 * [勘误](./tutorials/loongarch-ASM-errata.md)
+
+## 测评
+* [龙芯3A3000主板评测](LoongsonBenchmark/Loongson3A3000主板评测-2018.md)
+* [二代龙芯派VS树莓派3B+：谁的性能更强悍？](LoongsonBenchmark/二代龙芯派和树莓派3B+性能PK.md)
+* [龙芯3A4000处理器 SPEC CPU 2006测试](LoongsonBenchmark/SPEC2006/龙芯3A4000-SPEC%20CPU%202006测试-终结篇.pdf)
+* [航天龙梦福珑迷你主机开箱评测](LoongsonBenchmark/航天龙梦福珑迷你主机开箱评测.md)
