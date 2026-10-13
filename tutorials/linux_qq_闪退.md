@@ -29,11 +29,25 @@ QQ启动的时候，会使用系统自带的libvips-dev,而不是自带的libvip
 ```
 [16285:0214/113225.931135:FATAL:sandbox/linux/seccomp-bpf/trap.cc:112] Failed to configure SIGSYS handler
 ```
+之所以出现问题，是因为la_ow_syscall模块没有被正确编译和加载。沙箱功能需要内核模块的支持。
 
-问题出在sandbox上，解决方案是`Run the application with the --no-sandbox flag`
+解决方案也有两种。
+
+### 方案1： 彻底根治
+正确的解决方案是确保la_ow_syscall 模块被正确编译和加载。
+
+具体方案可以参考[liblol的安装](./install_liblol.md)
+
+### 方案2： 治标不治本
+
+当无法使用第一个解决方案的时候，简单的解决方案是`Run the application with the --no-sandbox flag`
 
 启动QQ的时候，添加`--no-sandbox`参数。
-修改`/usr/share/applications/qq.desktop`文件，将启动的命令改为:
+修改`/usr/share/applications/qq.desktop`文件，将启动的命令从
+```text
+Exec=/opt/QQ/qq %U
 ```
+改为:
+```text
 Exec=/opt/QQ/qq --no-sandbox %U
 ```
