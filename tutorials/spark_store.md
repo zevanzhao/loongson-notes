@@ -34,8 +34,7 @@ lat
 lat-runtime
 liblol
 linuxqq
-spark-wine9
-spark-wine10
+spark-wine
 wechat
 wemeet
 wps-office
@@ -65,4 +64,3 @@ Description: wechat from Tencent
 ```bash
 aptss install wechat
 ```
-
