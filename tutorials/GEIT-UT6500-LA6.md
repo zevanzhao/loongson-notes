@@ -44,8 +44,7 @@
 
 
 ### 触摸板的使用
-当使用Debian官方内核的时候，笔记本的触摸板无法使用。该问题在[这里](https://loongfans.cn/pages/guides/errata-laptop.html)亦有描述。
-
+当使用Debian官方内核的时候，笔记本的触摸板无法使用。该问题在[这里](https://loongfans.cn/zh/guides/errata-laptop)亦有描述。
 以Debian 中的 6.17.11内核为例，要解决这个问题，需要进行如下的操作：
 
 * 下载官方源码，并解压缩。
